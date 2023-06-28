@@ -9,7 +9,10 @@
 </head>
 
 <body>
-    <button>Press Me</button>
+    <form action="#">
+        <input type="number" name="Age" id="age">
+        <button onclick="test()">Press Me</button>
+    </form>
     <script>
         // Your JavaScript goes here!
         // console.log("Hello, World!")
@@ -87,11 +90,27 @@
 
         // const Name = 'Siege Teodosio';
         // console.log(Name.replace("Siege", "Hermione Eliz Cabesas"));
-        let age = 91;
-        if (age >= 14 && age <= 90) {
-            alert("Age is within 14-90 range");
-        } else {
-            alert("Age is not within range");
+        // let age = 91;
+        // if (age >= 14 && age <= 90) {
+        //     alert("Age is within 14-90 range");
+        // } else {
+        //     alert("Age is not within range");
+        // }
+
+        function test() {
+            let ageInput = document.getElementById("age").value;
+            // if (ageInput < 14 || ageInput > 90) {
+            //     alert(`${ageInput} is NOT in 14-90 range`);
+            // }
+            // else {
+            //     alert(`${ageInput} is in 14-90 range`);
+            // }
+            if (!(ageInput >= 14 && ageInput <= 90)) {
+                alert(`${ageInput} is NOT in 14-90 range`);
+            }
+            else {
+                alert(`${ageInput} is in 14-90 range`);
+            }
         }
 
     </script>
