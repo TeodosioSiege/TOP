@@ -7,12 +7,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JS Practice</title>
 </head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    html,
+    body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .center {}
+
+    .center>button {
+        padding: .5em 1em;
+    }
+</style>
 
 <body>
-    <form action="#">
+    <!-- <form action="#">
         <input type="number" name="Age" id="age">
         <button onclick="test()">Press Me</button>
-    </form>
+    </form> -->
+
+    <div class="center"><button onclick="checkLogin()">Check the Login</button></div>
     <script>
         // Your JavaScript goes here!
         // console.log("Hello, World!")
@@ -97,24 +121,46 @@
         //     alert("Age is not within range");
         // }
 
-        function test() {
-            let ageInput = document.getElementById("age").value;
-            // if (ageInput < 14 || ageInput > 90) {
-            //     alert(`${ageInput} is NOT in 14-90 range`);
-            // }
-            // else {
-            //     alert(`${ageInput} is in 14-90 range`);
-            // }
-            if (!(ageInput >= 14 && ageInput <= 90)) {
-                alert(`${ageInput} is NOT in 14-90 range`);
+        // function test() {
+        //     let ageInput = document.getElementById("age").value;
+        //     // if (ageInput < 14 || ageInput > 90) {
+        //     //     alert(`${ageInput} is NOT in 14-90 range`);
+        //     // }
+        //     // else {
+        //     //     alert(`${ageInput} is in 14-90 range`);
+        //     // }
+        //     if (!(ageInput >= 14 && ageInput <= 90)) {
+        //         alert(`${ageInput} is NOT in 14-90 range`);
+        //     }
+        //     else {
+        //         alert(`${ageInput} is in 14-90 range`);
+        //     }
+        // }
+
+        const checkLogin = () => {
+            let userName = prompt("Who's there?");
+            if (userName === null || userName === "") {
+                alert("Canceled");
+            } else if (userName !== "Admin") {
+                alert("I don't know you.");
+            } else {
+                checkPassword();
             }
-            else {
-                alert(`${ageInput} is in 14-90 range`);
+        }
+        function checkPassword() {
+            let password = prompt("Password?");
+            if (password === null || password === "") {
+                alert("Canceled");
+            } else if (password === "TheMaster") {
+                alert("Welcome!");
+            } else {
+                alert("Wrong password");
             }
         }
 
     </script>
-    next activity is
+    <br><br>
+    <!-- next activity is Check the login-->
 
 
 </body>
