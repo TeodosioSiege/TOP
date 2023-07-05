@@ -23,7 +23,7 @@
         align-items: center;
     }
 
-    .center {}
+
 
     .center>button {
         padding: .5em 1em;
@@ -36,7 +36,9 @@
         <button onclick="test()">Press Me</button>
     </form> -->
 
-    <div class="center"><button onclick="checkLogin()">Check the Login</button></div>
+    <div class="center"><button onclick="checkLogin()">Check the Login</button>
+        <button onclick="checkLogin2()">Check the Login</button>
+    </div>
     <script>
         // Your JavaScript goes here!
         // console.log("Hello, World!")
@@ -157,10 +159,32 @@
                 alert("Wrong password");
             }
         }
+        function checkPassword2() {
+            let password = prompt("Password?");
+            if (password === null || password === "") {
+                return "Canceled";
+            } else if (password === "TheMaster") {
+                return ("Welcome!");
+            } else {
+                return ("Wrong password");
+            }
+        }
+        function checkLogin2() {
+            let userName = prompt("Who's there?");
+            // if (userName === null || userName === "") {
+            //     alert("Canceled");
+            // } else if (userName !== "Admin") {
+            //     alert("I don't know you.");
+            // } else {
+            //     checkPassword();
+            // }
+            let response = (userName === null || userName === "") ? "Cancelled" : (userName !== "Admin" ? "I don't know you." : checkPassword2());
+            alert(response);
+        }
 
     </script>
     <br><br>
-    <!-- next activity is Check the login-->
+    <!-- next activity is try out the ternary operator-->
 
 
 </body>
