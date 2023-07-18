@@ -139,52 +139,103 @@
         //     }
         // }
 
-        const checkLogin = () => {
-            let userName = prompt("Who's there?");
-            if (userName === null || userName === "") {
-                alert("Canceled");
-            } else if (userName !== "Admin") {
-                alert("I don't know you.");
-            } else {
-                checkPassword();
-            }
-        }
-        function checkPassword() {
-            let password = prompt("Password?");
-            if (password === null || password === "") {
-                alert("Canceled");
-            } else if (password === "TheMaster") {
-                alert("Welcome!");
-            } else {
-                alert("Wrong password");
-            }
-        }
-        function checkPassword2() {
-            let password = prompt("Password?");
-            if (password === null || password === "") {
-                return "Canceled";
-            } else if (password === "TheMaster") {
-                return ("Welcome!");
-            } else {
-                return ("Wrong password");
-            }
-        }
-        function checkLogin2() {
-            let userName = prompt("Who's there?");
-            // if (userName === null || userName === "") {
-            //     alert("Canceled");
-            // } else if (userName !== "Admin") {
-            //     alert("I don't know you.");
-            // } else {
-            //     checkPassword();
-            // }
-            let response = (userName === null || userName === "") ? "Cancelled" : (userName !== "Admin" ? "I don't know you." : checkPassword2());
-            alert(response);
-        }
+        // const checkLogin = () => {
+        //     let userName = prompt("Who's there?");
+        //     if (userName === null || userName === "") {
+        //         alert("Canceled");
+        //     } else if (userName !== "Admin") {
+        //         alert("I don't know you.");
+        //     } else {
+        //         checkPassword();
+        //     }
+        // }
+        // function checkPassword() {
+        //     let password = prompt("Password?");
+        //     if (password === null || password === "") {
+        //         alert("Canceled");
+        //     } else if (password === "TheMaster") {
+        //         alert("Welcome!");
+        //     } else {
+        //         alert("Wrong password");
+        //     }
+        // }
+        // function checkPassword2() {
+        //     let password = prompt("Password?");
+        //     if (password === null || password === "") {
+        //         return "Canceled";
+        //     } else if (password === "TheMaster") {
+        //         return ("Welcome!");
+        //     } else {
+        //         return ("Wrong password");
+        //     }
+        // }
+        // function checkLogin2() {
+        //     let userName = prompt("Who's there?");
+        // if (userName === null || userName === "") {
+        //     alert("Canceled");
+        // } else if (userName !== "Admin") {
+        //     alert("I don't know you.");
+        // } else {
+        //     checkPassword();
+        // }
+        //     let response = (userName === null || userName === "") ? "Cancelled" : (userName !== "Admin" ? "I don't know you." : checkPassword2());
+        //     alert(response);
+        // }
+
+        // let num = Number(window.prompt("Number?"));
+        // let numAlert =
+        //     num > 0 ? 1 : num < 0 ? -1 : 0;
+
+        // alert(numAlert);
+
+        // switch (browser) {
+        //     case 'Edge':
+        //         alert("You've got the Edge!");
+        //         break;
+
+        //     case 'Chrome':
+        //     case 'Firefox':
+        //     case 'Safari':
+        //     case 'Opera':
+        //         alert('Okay we support these browsers too');
+        //         break;
+
+        //     default:
+        //         alert('We hope that this page looks ok!');
+        // }
+        // let browser = prompt("Browser?");
+
+        // if (browser === 'Edge') {
+        //     alert("You've got the Edge!");
+        // } else if (
+        //     browser === 'Chrome'
+        //     || browser === 'Firefox'
+        //     || browser === 'Safari'
+        //     || browser === 'Opera'
+        // ) {
+        //     alert('Okay we support these browsers too');
+        // } else {
+        //     alert('We hope that this page looks ok!');
+        // }
+
+        // ternary(prompt("Browser"));
+
+        // function ternary(response) {
+        //     alert(response === "Edge" ?
+        //         "You've got the Edge!" :
+        //         (response === 'Chrome'
+        //             || response === 'Safari'
+        //             || response === 'Opera'
+        //         ) ?
+        //             'Okay we support these browsers too' :
+        //             'We hope that this page looks ok!'
+
+        //     );
+        // }
 
     </script>
     <br><br>
-    <!-- next activity is try out the ternary operator-->
+    <!-- next activity is Switch-->
 
 
 </body>
